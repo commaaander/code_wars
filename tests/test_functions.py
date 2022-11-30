@@ -3,7 +3,7 @@ from solutions.take_a_ten_minutes_walk import is_valid_walk
 from solutions.highest_and_lowest import high_and_low
 from solutions.complementary_dna import DNA_strand
 from solutions.find_the_next_perfect_square import find_next_square
-import codewars_test as test
+import _codewars_test as test
 
 
 def test_create_phone_number():
@@ -35,3 +35,13 @@ def test_find_the_next_perfect_square():
     test.assert_equals(find_next_square(15241383936), 15241630849, "Wrong output for 15241383936")
     test.assert_equals(find_next_square(155), -1, "Wrong output for 155")
     test.assert_equals(find_next_square(342786627), -1, "Wrong output for 342786627")
+
+
+def test_rgb():
+    from solutions.rgb_to_hex_conversion import rgb
+
+    test.assert_equals(rgb(0, 0, 0), "000000", "testing zero values")
+    test.assert_equals(rgb(1, 2, 3), "010203", "testing near zero values")
+    test.assert_equals(rgb(255, 255, 255), "FFFFFF", "testing max values")
+    test.assert_equals(rgb(254, 253, 252), "FEFDFC", "testing near max values")
+    test.assert_equals(rgb(-20, 275, 125), "00FF7D", "testing out of range values")
