@@ -1,5 +1,6 @@
 from solutions.create_phone_number import create_phone_number
 from solutions.take_a_ten_minutes_walk import is_valid_walk
+from solutions.highest_and_lowest import high_and_low
 import codewars_test as test
 
 
@@ -14,3 +15,6 @@ def test_take_a_ten_minutes_walk():
     test.assert_equals(is_valid_walk(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]), False, "should return False")
 
 
+def test_highest_and_lowest():
+    test.assert_equals(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), "42 -9")
+    test.assert_equals(high_and_low("1 2 3"), "3 1")
