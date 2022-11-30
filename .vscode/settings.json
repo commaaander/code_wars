@@ -1,0 +1,22 @@
+{
+    "editor.formatOnSave": true,
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#004444"
+    },
+    "[python]": {
+        "editor.rulers": [
+            129
+        ],
+    },
+    "python.testing.pytestEnabled": true,
+    "python.defaultInterpreterPath": "./.venv/bin/python",
+    "python.testing.pytestPath": ".venv/bin/pytest",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "black-formatter.args": [
+        "--config",
+        "./pyproject.toml"
+    ]
+}
