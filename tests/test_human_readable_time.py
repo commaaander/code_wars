@@ -1,4 +1,4 @@
-import _codewars_test as test
+import codewars_test as test
 from solutions.human_readable_time import make_readable
 
 

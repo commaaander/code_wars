@@ -1,4 +1,4 @@
-import _codewars_test as test
+import codewars_test as test
 
 from solutions.rgb_to_hex_conversion import rgb
 

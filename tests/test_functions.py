@@ -3,7 +3,7 @@ from solutions.take_a_ten_minutes_walk import is_valid_walk
 from solutions.highest_and_lowest import high_and_low
 from solutions.complementary_dna import DNA_strand
 from solutions.find_the_next_perfect_square import find_next_square
-import _codewars_test as test
+import codewars_test as test
 
 
 def test_create_phone_number():
@@ -12,7 +12,9 @@ def test_create_phone_number():
 
 def test_take_a_ten_minutes_walk():
     test.assert_equals(is_valid_walk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]), True, "should return True")
-    test.assert_equals(is_valid_walk(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"]), False, "should return False")
+    test.assert_equals(
+        is_valid_walk(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"]), False, "should return False"
+    )
     test.assert_equals(is_valid_walk(["w"]), False, "should return False")
     test.assert_equals(is_valid_walk(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]), False, "should return False")
 
