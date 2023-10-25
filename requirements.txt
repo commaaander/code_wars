@@ -1,0 +1,5 @@
+codewars-test @ git+https://github.com/codewars/python-test-framework.git@3e2ceebd6e6eda7b5058792d1d23a48be8eefa6a
+iniconfig==2.0.0
+packaging==23.2
+pluggy==1.3.0
+pytest==7.4.3
