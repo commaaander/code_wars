@@ -12,13 +12,39 @@
 # "(}"       =>  False
 # "[(])"     =>  False
 # "[({})](]" =>  False
+import codewars_test as test  # type: ignore
 
 
 def valid_braces(string: str) -> bool:
-    valid_brace_pairs = ["()", "[]", "{}"]
-    while string != "":
-        brace_pair = string[0] + string[-1]
-        if brace_pair not in valid_brace_pairs:
-            return False
-        string = string[1:-1]
-    return True
+    while True:
+        new_string = string
+        for brace_pair in ["()", "[]", "{}"]:
+            new_string = new_string.replace(brace_pair, "")
+        if new_string == string:
+            break
+        string = new_string
+    return string == ""
+
+
+def assert_valid(string):
+    test.assert_equals(valid_braces(string), True, 'Expected "{0}" to be valid'.format(string))
+
+
+def assert_invalid(string):
+    test.assert_equals(valid_braces(string), False, 'Expected "{0}" to be invalid'.format(string))
+
+
+if __name__ == "__main__":
+    assert_valid("()")
+    assert_invalid("(}")
+    assert_valid("[]")
+    assert_invalid("[(])")
+    assert_valid("{}")
+    assert_valid("{}()[]")
+    assert_valid("([{}])")
+    assert_invalid("([}{])")
+    assert_valid("{}({})[]")
+    assert_valid("(({{[[]]}}))")
+    assert_invalid("(((({{")
+    assert_invalid(")(}{][")
+    assert_invalid("())({}}{()][][")

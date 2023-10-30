@@ -13,7 +13,7 @@
 # It will never give you an empty array (that's not a walk, that's standing still!).
 
 
-def is_valid_walk(walk):
+def is_valid_walk(walk) -> bool:
     walk_duration = 10
     cur_walk_step = 0
     pos_x = 0

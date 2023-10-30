@@ -1,12 +1,12 @@
 import logging
 import string
 
-import codewars_test as test
+import codewars_test as test  # type: ignore
 
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
-def pig_it(text):
+def pig_it(text: str) -> str:
     pig_text: str = ""
     for word in text.split():
         if word in string.punctuation:
