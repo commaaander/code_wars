@@ -14,6 +14,5 @@
     },
     "mypy-type-checker.importStrategy": "fromEnvironment",
     "mypy-type-checker.preferDaemon": false,
-    "ruff.configuration": "./pyproject.toml",
     "python.languageServer": "Pylance",
 }
