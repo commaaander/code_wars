@@ -44,7 +44,8 @@
 # "WEST" and "SOUTH", "SOUTH" and "EAST" are not directly opposite of each other and can't become such. Hence the
 # result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
 # if you want to translate, please ask before translating.
-
+#
+# https://www.codewars.com/kata/550f22f4d758534c1100025a
 
 from typing import List
 
