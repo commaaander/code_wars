@@ -7,11 +7,19 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = ["codewars-test", "ipykernel>=6.29.5", "pytest>=8.3.3", "ruff>=0.8.0"]
+dev = [
+    "codewars-test",
+    "ipykernel>=6.29.5",
+    "mypy>=1.13.0",
+    "pytest>=8.3.3",
+    "ruff>=0.8.0",
+]
 
 [tool.uv.sources]
 codewars-test = { git = "https://github.com/codewars/python-test-framework.git" }
 
+[tool.mypy]
+disable_error_code = "import-untyped"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
