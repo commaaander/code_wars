@@ -2,8 +2,15 @@ import codewars_test as test
 
 
 def generate_hashtag(s: str) -> str | bool:
-    # your code here
-    return False
+    if s == "":
+        return False
+
+    s = f"#{s.strip().title().replace(' ','')}"
+
+    if len(s) > 140:
+        return False
+
+    return s
 
 
 @test.describe("Fixed tests")
