@@ -51,9 +51,9 @@ def main() -> None:
         print(f"Created {py_file_path}")
 
     with open(md_file_path, "w") as md_file:
-        md_file.write(f"# {args.name}\n\n")
+        md_file.write(f"# {args.name}\n")
         if args.url:
-            md_file.write(f"\n<{args.url}>\n\n")
+            md_file.write(f"\n<{args.url}>\n")
         print(f"Created {md_file_path}")
 
 
