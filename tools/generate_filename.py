@@ -11,7 +11,6 @@ def main() -> None:
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--dry-run", action="store_true", help="Run the script without creating files.")
-
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--url", type=str, help="The URL of the kata.")
     group.add_argument("--name", type=str, help="The name of the kata.")
@@ -52,7 +51,9 @@ def main() -> None:
         print(f"Created {py_file_path}")
 
     with open(md_file_path, "w") as md_file:
-        md_file.write(f"# {args.name}\n\n<{args.url}>\n\n")
+        md_file.write(f"# {args.name}\n\n")
+        if args.url:
+            md_file.write(f"\n<{args.url}>\n\n")
         print(f"Created {md_file_path}")
 
 
