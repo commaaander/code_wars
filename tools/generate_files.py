@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Generate Python and Markdown files for a Codewars kata.")
 
     parser.add_argument("--dry-run", action="store_true", help="Run the script without creating files.")
     group = parser.add_mutually_exclusive_group(required=True)
